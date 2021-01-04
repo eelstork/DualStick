@@ -9,7 +9,7 @@ public class Slime : MonoBehaviour{
 
     void Update(){
         var u = (player.transform.position - transform .transform.position).normalized;
-        transform .transform.position += u * speed * Time.deltaTime ;
+        transform.transform.position += u * speed * Time.deltaTime;
     }
 
     void OnCollisionEnter(){
