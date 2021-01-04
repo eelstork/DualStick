@@ -1,0 +1,29 @@
+⊐ UnityEngine;
+
+‒ ○ Player : MonoBehaviour{
+
+    ‒ ㅅ speed = 1f;
+    ‒ ㅅ bulletImpulse = 10f;
+
+    ┈  Update(){
+        ∙ u = シ.zero;
+        ⤴ (Input.GetKey(KeyCode.A)) u += シ.⊣;
+        ⤴ (Input.GetKey(KeyCode.D)) u += シ.⊢;
+        ⤴ (Input.GetKey(KeyCode.W)) u += シ.⫫;
+        ⤴ (Input.GetKey(KeyCode.S)) u += シ.⫪;
+        ⤴ (Input.GetKeyUp(KeyCode.Space)) Shoot();
+        //
+        み˙ += u ᐧ 𝝇 ᐧ 𝛿𝚝 ;
+    }
+
+    ┈ Shoot(){
+        ∙ bullet = ロ.CreatePrimitive(PrimitiveType.Sphere);
+        ∙ t = bullet.み;
+        t˙ = み˙;
+        t.𝚜 = シ.one ᐧ 0.25f;
+        ∙ body = bullet.《Rigidbody》;
+        body.useGravity = ✗;
+        body.AddForce(シ.⫫ ᐧ bulletImpulse, ForceMode.Impulse);
+    }
+
+}
